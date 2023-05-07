@@ -1,5 +1,5 @@
 // import
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 
 // função creatWindow
@@ -11,7 +11,7 @@ const createWindow = () => {
             preload: path.join(__dirname, "preload.js"),
         },
     });
-
+    ipcMain.handle("ping", () => "pong");
     win.loadFile("index.html");
 };
 
