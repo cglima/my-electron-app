@@ -4,7 +4,9 @@
     "description": "primeiro tutorial electron",
     "main": "main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "debug": "echo \"isso é um teste\""
     },
     "author": "cassiana",
     "license": "MIT",
